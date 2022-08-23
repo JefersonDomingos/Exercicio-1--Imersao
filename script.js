@@ -22,7 +22,7 @@ const items = [
 
     {
         id:3,
-        nome:'Copo Témico',
+        nome:'Copo Térmico',
         img:'IMG/copoFla-azul.png',
         quantidade: 0,
     },
@@ -50,10 +50,27 @@ inicializarLoja = () => {
         <div class="produto-apenas">
             <img src ="`+items[i].img+`"></img>
             <p>`+items[i].nome+`</p>
-            <a keys="`+items[i].id+`" href="#">Adicionar ao carrinho</a>
+            <a class="adicionar-carrinho" key="`+items[i].id+`" href="#">Adicionar ao carrinho</a>
         </div>
         `;
     }
   
 }
 inicializarLoja() //chamando a função
+
+atualizarCarrinho = ()=>{
+    console.log(items)
+}
+
+var addCarrinho = document.getElementsByClassName('adicionar-carrinho'); //todos os links de add ao carrinho
+
+for(let i = 0; i < addCarrinho.length; i++){
+    addCarrinho[i].addEventListener('click',function(){
+        let key = this.getAttribute('key'); //corresponde a cada id que passar em key de <a> do loop em items.
+        items[key].quantidade++;
+        atualizarCarrinho()
+        return false; //nesse caso só para não atualizar a pagina
+
+    })
+}
+

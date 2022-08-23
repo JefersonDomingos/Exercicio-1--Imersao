@@ -1,0 +1,14 @@
+a{
+    color:red;
+    text-decoration: none;
+}
+
+#produtos{
+    display:flex;
+
+}
+
+img{
+    width:200px;
+    height:300px;
+}
