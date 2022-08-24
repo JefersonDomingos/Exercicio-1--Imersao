@@ -58,8 +58,8 @@ inicializarLoja = () => {
 }
 inicializarLoja() //chamando a função
 
-atualizarCarrinho = ()=>{
-    console.log(items)
+atualizarCarrinho = ()=>{  
+    console.log(items) 
 }
 
 var addCarrinho = document.getElementsByClassName('adicionar-carrinho'); //todos os links de add ao carrinho
