@@ -1,14 +1,165 @@
-a{
-    color:red;
-    text-decoration: none;
-}
+ 
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 
-#produtos{
-    display:flex;
+        *{
+            font-family: Poppins, sans-serif;
+            margin: 0;
+            padding:2px;
+            box-sizing: border-box;
+        }
+     
+        .cabecalho{
+            display: flex;
+            height: 100px;
+            background-color: red;
+            padding: 10px 40%;
+            text-align: center;
+            align-items: center;
+            box-shadow: 3px 7px 10px black;
 
-}
+    
+        }
 
-img{
-    width:200px;
-    height:300px;
-}
+        .logo{
+
+            background-image: url('./IMG/logoFla.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            left: 20%;
+        }
+
+        .lista{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .itens{
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform .2s;
+
+        }
+
+        .itens:hover{
+        
+            transform: scale(1.2);
+        }
+
+        .itens a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .itens a:hover{
+            text-decoration: underline;
+        }
+
+        
+        #produtos{
+            max-width: 900px;
+            margin: 0 auto;
+            padding:0;
+            display:flex;
+            flex-wrap: wrap;
+
+        }
+        
+        #carrinho{
+            max-width: 500px;
+            margin:0 auto;
+            padding:0;
+            display:block;
+        }
+        
+        .produto-single{
+            border-radius: 3px;
+            width: 32%;
+            height: 100%;
+            margin-right:1%;
+            border: 1px solid #bb9351;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .produto-single:hover{
+            
+            border: 2px solid red;
+
+        }
+
+        .produto-single p{
+
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .produto-single a{
+
+            text-decoration: none;
+            color: black;
+            background-color: red;
+            text-align: center;
+            display: block; 
+            padding: 4px 0;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+
+        .produto-single img{
+            max-width: 100%;
+        }
+
+       
+        .info-checkout{
+            border-bottom: 2px dotted;
+            padding: 10px 0;
+        }
+
+    @media screen and (max-width:480px){
+        .produto-single{
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .produto-single:hover{
+        
+            border: 2px solid red;
+
+        }
+
+        .cabecalho{
+            width: 100%;
+        }
+
+        .logo{
+            left: 10%;
+        }
+
+        .menu{ 
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            top: 108px;
+            /*left: -100%;*/
+            right: 0;
+            background-color: red;
+
+        }
+
+        .lista{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            list-style: none;
+        }
+
+    }
+
