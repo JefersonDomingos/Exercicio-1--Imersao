@@ -80,6 +80,8 @@
                     <img src="`+val.img+`" />
                     <p>`+val.nome+`</p>
                     <a key="`+val.id+`"href="javascript:void(0)">Adicionar ao Carrinho!<a/>
+
+                    <a id="ir-carrinho" key="`+val.id+`"href="index.html#carrinho">Ir para o Carrinho!<a/>
                 </div>
                 `;
             })  //mudei o href nos links para não atualizar a pagina href="javascript:void(0)"
@@ -94,10 +96,9 @@
                 if(val.quantidade > 0){
                 containerCarrinho.innerHTML+= `
                 <div class="info-checkout">
-               <p style="float:left;">Produto: `+val.nome+`</p>
-               <p style="float:right;">Quantidade: `+val.quantidade+`</p>
+               <img src="`+val.img+`"class="img-produto"style="float:left;"></img>
+               <p class="paragrafo-quantidade" style="float:right;">Quantidade: `+val.quantidade+`</p>
                <div style="clear:both"></div>
-            
                </div>
                
                 `;
@@ -115,3 +116,15 @@
             })  
         }
 
+
+
+        let botaoMenu = document.querySelector('.abrir-menu');
+        
+        botaoMenu.addEventListener("click", function (){
+            let mostrarMenu = document.querySelector('.menu');
+            mostrarMenu.classList.toggle('mostrar-menu') //adicionando e removendo a  classe mostrar-menu no menu
+
+        })
+
+
+     
