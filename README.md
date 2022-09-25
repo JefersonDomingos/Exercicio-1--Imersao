@@ -5,7 +5,10 @@
 ## Tecnologias
 * HTML
 * CSS
-*JavaScript
+* JavaScript
 
 ## Screenshots
 ![Screenshot da loja do flamengo]()
+
+## Link para rodar o projeto
+https://jefersondomingos.github.io/Exercicio-1--Imersao/
